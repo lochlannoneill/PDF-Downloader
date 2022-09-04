@@ -19,7 +19,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="400.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
    <children>
-      <MenuBar prefHeight="25.0" prefWidth="440.0" style="-fx-background-color: #202020;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <MenuBar prefHeight="25.0" prefWidth="440.0" style="-fx-background-color: #202020; -fx-border-color: #1b1b1b;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -65,7 +65,7 @@
             </HBox>
             <HBox alignment="CENTER" prefWidth="440.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#btnDownloadClicked" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #fe0000; -fx-font-weight: bold; -fx-font-size: 24;" text="Download" textAlignment="CENTER" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#btnDownloadClicked" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #fe0000; -fx-font-size: 24;" text="Download" textAlignment="CENTER" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -77,10 +77,10 @@
             </HBox>
          </children>
       </VBox>
-      <VBox alignment="CENTER" layoutY="455.0" prefHeight="51.0" prefWidth="400.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <VBox alignment="CENTER" disable="true" layoutY="455.0" prefHeight="51.0" prefWidth="400.0" visible="false" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" opacity="0.4" prefHeight="17.0" prefWidth="200.0" text="Waiting for media query..." textAlignment="CENTER" textFill="#ffffff80" />
-            <ProgressBar opacity="0.4" prefHeight="16.0" prefWidth="239.0" progress="0.53" style="-fx-background-color: #fe0000;" />
+            <ProgressBar opacity="0.4" prefHeight="16.0" prefWidth="239.0" progress="0.0" style="-fx-background-color: #fe0000;" />
          </children>
       </VBox>
    </children>
