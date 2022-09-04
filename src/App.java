@@ -16,7 +16,7 @@ public class App extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
         Scene scene = new Scene(root);
   
-        primaryStage.setTitle("YouTube Downloader");
+        primaryStage.setTitle("PDF Downloader");
         // primaryStage.getIcons().add(new Image("file:logo.png"));
         primaryStage.getIcons().add(new Image(this.getClass().getResourceAsStream("logo.png")));
         primaryStage.setResizable(false);

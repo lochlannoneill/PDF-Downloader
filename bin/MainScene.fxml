@@ -38,7 +38,7 @@
           </Menu>
         </menus>
       </MenuBar>
-      <ImageView fitHeight="91.0" fitWidth="128.0" layoutX="136.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="136.0" AnchorPane.topAnchor="80.0">
+      <ImageView fitHeight="128.0" fitWidth="110.0" layoutX="155.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="154.4707260131836" AnchorPane.topAnchor="64.0">
          <image>
             <Image url="@logo.png" />
          </image>
@@ -46,7 +46,7 @@
             <Reflection fraction="0.4" topOpacity="0.05" />
          </effect>
       </ImageView>
-      <VBox alignment="CENTER" layoutY="175.0" prefHeight="200.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+      <VBox alignment="CENTER" layoutY="221.0" prefHeight="200.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="221.0">
          <children>
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="440.0" spacing="2.0">
                <children>
@@ -60,12 +60,12 @@
             </HBox>
             <HBox alignment="CENTER" prefWidth="440.0">
                <children>
-                  <TextField fx:id="textfieldSearchbar" prefHeight="40.0" prefWidth="320.0" promptText="Title or URL" style="-fx-font-size: 18; -fx-background-color: #121212; -fx-border-color: #222222;" />
+                  <TextField fx:id="textfieldSearchbar" prefHeight="40.0" prefWidth="320.0" promptText="URL" style="-fx-font-size: 18; -fx-background-color: #121212; -fx-border-color: #222222;" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefWidth="440.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#btnDownloadClicked" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #fe0000; -fx-font-size: 24;" text="Download" textAlignment="CENTER" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#btnDownloadClicked" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #ff3c00; -fx-font-size: 24;" text="Download" textAlignment="CENTER" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -77,10 +77,10 @@
             </HBox>
          </children>
       </VBox>
-      <VBox alignment="CENTER" disable="true" layoutY="455.0" prefHeight="51.0" prefWidth="400.0" visible="false" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <VBox alignment="CENTER" layoutY="455.0" prefHeight="51.0" prefWidth="400.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" opacity="0.4" prefHeight="17.0" prefWidth="200.0" text="Waiting for media query..." textAlignment="CENTER" textFill="#ffffff80" />
-            <ProgressBar opacity="0.4" prefHeight="16.0" prefWidth="239.0" progress="0.0" style="-fx-background-color: #fe0000;" />
+            <Label fx:id="downloadProgressDescription" alignment="CENTER" contentDisplay="CENTER" opacity="0.4" prefHeight="17.0" prefWidth="240.0" text="Waiting for query . . ." textAlignment="CENTER" textFill="#ffffff80" />
+            <ProgressBar fx:id="downloadProgressbar" opacity="0.4" prefHeight="16.0" prefWidth="239.0" progress="0.0" style="-fx-background-color: #fe0000;" />
          </children>
       </VBox>
    </children>
