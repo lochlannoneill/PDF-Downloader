@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="400.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="440.0" style="-fx-background-color: #202020;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Settings">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="91.0" fitWidth="128.0" layoutX="136.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="136.0" AnchorPane.topAnchor="80.0">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+         <effect>
+            <Reflection fraction="0.4" topOpacity="0.05" />
+         </effect>
+      </ImageView>
+      <VBox alignment="CENTER" layoutY="175.0" prefHeight="200.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="440.0" spacing="2.0">
+               <children>
+                  <TextField disable="true" editable="false" prefHeight="32.0" prefWidth="220.0" promptText="{Placeholder for download location}" style="-fx-background-color: #313131; -fx-border-color: #222222;" />
+                  <ComboBox id="selectedFileType" disable="true" prefHeight="30.0" prefWidth="100.0" promptText=".mp3" style="-fx-background-color: #313131;">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="440.0">
+               <children>
+                  <TextField fx:id="textfieldMediaInput" prefHeight="40.0" prefWidth="320.0" promptText="Title or URL" style="-fx-font-size: 18; -fx-background-color: #121212; -fx-border-color: #222222;" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="440.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnDownloadClicked" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #fe0000; -fx-font-weight: bold; -fx-font-size: 24;" text="Download" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="24.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutY="455.0" prefHeight="51.0" prefWidth="400.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" opacity="0.4" prefHeight="17.0" prefWidth="200.0" text="Waiting for media query..." textAlignment="CENTER" textFill="#ffffff80" />
+            <ProgressBar opacity="0.4" prefHeight="16.0" prefWidth="239.0" progress="0.53" style="-fx-background-color: #fe0000;" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
