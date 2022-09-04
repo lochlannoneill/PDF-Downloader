@@ -50,8 +50,8 @@
          <children>
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="440.0" spacing="2.0">
                <children>
-                  <TextField disable="true" editable="false" prefHeight="32.0" prefWidth="220.0" promptText="{Placeholder for download location}" style="-fx-background-color: #313131; -fx-border-color: #222222;" />
-                  <ComboBox id="selectedFileType" disable="true" prefHeight="30.0" prefWidth="100.0" promptText=".mp3" style="-fx-background-color: #313131;">
+                  <TextField disable="true" editable="false" prefHeight="32.0" prefWidth="240.0" promptText="{Placeholder for download location}" style="-fx-background-color: #313131; -fx-border-color: #222222;" />
+                  <ComboBox id="selectedFileType" disable="true" prefHeight="30.0" prefWidth="80.0" promptText=".mp3" style="-fx-background-color: #313131;">
                      <cursor>
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
@@ -60,7 +60,7 @@
             </HBox>
             <HBox alignment="CENTER" prefWidth="440.0">
                <children>
-                  <TextField fx:id="textfieldMediaInput" prefHeight="40.0" prefWidth="320.0" promptText="Title or URL" style="-fx-font-size: 18; -fx-background-color: #121212; -fx-border-color: #222222;" />
+                  <TextField fx:id="textfieldSearchbar" prefHeight="40.0" prefWidth="320.0" promptText="Title or URL" style="-fx-font-size: 18; -fx-background-color: #121212; -fx-border-color: #222222;" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefWidth="440.0">
