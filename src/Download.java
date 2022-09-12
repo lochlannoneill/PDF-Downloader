@@ -6,23 +6,26 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+// import javafx.scene.control.ProgressBar;
+
 public class Download implements Runnable {
     
     String link;
     File out;
-    // public double percentDownloaded;
+    // ProgressBar downloadProgressbar;
 
     // public Download(String location, String link, File out)
+    // public Download (String link, File out, ProgressBar downloadProgressbar)
     public Download (String link, File out) {
         this.link = link;
         this.out = out;
-        // percentDownloaded = 0.00;
+        // this.downloadProgressbar = downloadProgressbar;
     }
 
     @Override
     public void run() {
-        // TODO Auto-generated method stub
         try {
+            // downloadProgressbar.setProgress(4.0);
             URL url = new URL(link);
             HttpURLConnection http = (HttpURLConnection)url.openConnection();
             double fileSize = (double)http.getContentLength();
@@ -36,9 +39,10 @@ public class Download implements Runnable {
             while((read = in.read(buffer, 0, 1024)) >= 0) {
                 bout.write(buffer, 0, read);
                 downloaded += read;
-                percentDownloaded = (downloaded*100)/fileSize;
+                // percentDownloaded = (downloaded*100)/fileSize;
                 String percent = String.format("%.4f", percentDownloaded);
                 System.out.println("Downloaded " + percent + "% of a file.");
+                // downloadProgressbar.setProgress(percentDownloaded);
             }
             bout.close();
             in.close();

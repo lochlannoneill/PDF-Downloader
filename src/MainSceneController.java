@@ -7,7 +7,6 @@ import java.io.File;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ProgressBar;
-import javafx.stage.Stage;
 
 public class MainSceneController {
     
@@ -21,10 +20,10 @@ public class MainSceneController {
         // String title = textfieldSearchbar.getText();
         // mainWindow.setTitle(title);
 
-        String url = textfieldSearchbar.getText();
-        
-        File out = new File("C:\\Users\\Lochlann\\Desktop\\downloaded(1).pdf");
-
+        String path = "C:\\Users\\Lochlann\\Desktop\\";
+        File out = new File(path + "download.mp4");
+        String url = textfieldSearchbar.getText(); 
+        // new Thread(new Download(url, out, downloadProgressbar)).start();
         new Thread(new Download(url, out)).start();
     }
     

@@ -80,7 +80,7 @@
       <VBox alignment="CENTER" layoutY="455.0" prefHeight="51.0" prefWidth="400.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <Label fx:id="downloadProgressDescription" alignment="CENTER" contentDisplay="CENTER" opacity="0.4" prefHeight="17.0" prefWidth="240.0" text="Waiting for query . . ." textAlignment="CENTER" textFill="#ffffff80" />
-            <ProgressBar fx:id="downloadProgressbar" opacity="0.4" prefHeight="16.0" prefWidth="239.0" progress="0.0" style="-fx-background-color: #fe0000;" />
+            <ProgressBar fx:id="downloadProgressbar" prefHeight="16.0" prefWidth="239.0" progress="0.01" style="-fx-background-color: #fe0000;" />
          </children>
       </VBox>
    </children>
