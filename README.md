@@ -7,7 +7,7 @@
 ### Background:
 * IDE: ***[VSCode](https://code.visualstudio.com/)***  
 * Language: ***[JavaFX](https://openjfx.io/)***  
-* JavaFX Design: ***[Scene Builder](https://gluonhq.com/products/scene-builder/)***  
+* FXML: ***[Scene Builder](https://gluonhq.com/products/scene-builder/)***  
 
 ### About:
 An interactive GUI to download a PDF using a user-provided URL.  
