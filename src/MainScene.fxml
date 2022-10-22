@@ -40,7 +40,7 @@
       </MenuBar>
       <ImageView fitHeight="128.0" fitWidth="110.0" layoutX="155.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="154.4707260131836" AnchorPane.topAnchor="64.0">
          <image>
-            <Image url="@logo.png" />
+            <Image url="@resources/logo.png" />
          </image>
          <effect>
             <Reflection fraction="0.4" topOpacity="0.05" />
@@ -50,8 +50,8 @@
          <children>
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="440.0" spacing="2.0">
                <children>
-                  <TextField disable="true" editable="false" prefHeight="32.0" prefWidth="240.0" promptText="{Placeholder for download location}" style="-fx-background-color: #313131; -fx-border-color: #222222;" />
-                  <ComboBox id="selectedFileType" disable="true" prefHeight="30.0" prefWidth="80.0" promptText=".mp3" style="-fx-background-color: #313131;">
+                  <TextField fx:id="textfieldPath" disable="true" editable="false" prefHeight="32.0" prefWidth="220.0" promptText="Download Path" style="-fx-background-color: #313131; -fx-border-color: #222222; -fx-text-fill: #7b7b7b;" />
+                  <ComboBox id="selectedFileType" fx:id="comboboxFiletype" disable="true" prefHeight="30.0" prefWidth="98.0" promptText=".pdf" style="-fx-background-color: #313131; -fx-text-fill: #fffcf9;" visibleRowCount="5">
                      <cursor>
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
@@ -60,12 +60,12 @@
             </HBox>
             <HBox alignment="CENTER" prefWidth="440.0">
                <children>
-                  <TextField fx:id="textfieldSearchbar" prefHeight="40.0" prefWidth="320.0" promptText="URL" style="-fx-font-size: 18; -fx-background-color: #121212; -fx-border-color: #222222;" />
+                  <TextField fx:id="textfieldSearchbar" prefHeight="40.0" prefWidth="320.0" promptText="URL" style="-fx-font-size: 18; -fx-background-color: #121212; -fx-border-color: #222222; -fx-text-fill: #fffcf9;" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefWidth="440.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#btnDownloadClicked" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #ff3c00; -fx-font-size: 24;" text="Download" textAlignment="CENTER" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#btnDownloadClicked" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #ff3c00; -fx-font-size: 24; -fx-text-fill: #fffcf9;" text="Download" textAlignment="CENTER" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -79,8 +79,8 @@
       </VBox>
       <VBox alignment="CENTER" layoutY="455.0" prefHeight="51.0" prefWidth="400.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label fx:id="downloadProgressDescription" alignment="CENTER" contentDisplay="CENTER" opacity="0.4" prefHeight="17.0" prefWidth="240.0" text="Waiting for query . . ." textAlignment="CENTER" textFill="#ffffff80" />
-            <ProgressBar fx:id="downloadProgressbar" prefHeight="16.0" prefWidth="239.0" progress="0.01" style="-fx-background-color: #fe0000;" />
+            <Label fx:id="downloadProgressDescription" alignment="CENTER" contentDisplay="CENTER" opacity="0.4" prefHeight="17.0" prefWidth="240.0" textAlignment="CENTER" textFill="#ffffff80" />
+            <ProgressBar fx:id="downloadProgressbar" prefHeight="16.0" prefWidth="239.0" progress="0.01" style="-fx-control-inner-background: #313131; -fx-text-box-border: #222222; -fx-accent: #ff3c00; -fx-shadow-highlight-color: transparent;" />
          </children>
       </VBox>
    </children>

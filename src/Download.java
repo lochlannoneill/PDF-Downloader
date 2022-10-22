@@ -6,26 +6,27 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-// import javafx.scene.control.ProgressBar;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 
 public class Download implements Runnable {
     
     String link;
     File out;
-    // ProgressBar downloadProgressbar;
+    String fileType;
+    ProgressBar downloadProgressbar;
+    Label downloadProgressDescription;
 
-    // public Download(String location, String link, File out)
-    // public Download (String link, File out, ProgressBar downloadProgressbar)
-    public Download (String link, File out) {
+    public Download (String link, File out, ProgressBar downloadProgressbar, Label downloadProgressDescription) {
         this.link = link;
         this.out = out;
-        // this.downloadProgressbar = downloadProgressbar;
+        this.downloadProgressbar = downloadProgressbar;
+        this.downloadProgressDescription = downloadProgressDescription;
     }
 
     @Override
     public void run() {
         try {
-            // downloadProgressbar.setProgress(4.0);
             URL url = new URL(link);
             HttpURLConnection http = (HttpURLConnection)url.openConnection();
             double fileSize = (double)http.getContentLength();
@@ -39,10 +40,12 @@ public class Download implements Runnable {
             while((read = in.read(buffer, 0, 1024)) >= 0) {
                 bout.write(buffer, 0, read);
                 downloaded += read;
-                // percentDownloaded = (downloaded*100)/fileSize;
-                String percent = String.format("%.4f", percentDownloaded);
-                System.out.println("Downloaded " + percent + "% of a file.");
-                // downloadProgressbar.setProgress(percentDownloaded);
+
+                percentDownloaded = (downloaded*100)/fileSize;
+                String percent = String.format("%.2f", percentDownloaded);
+                // TODO - downloadProgressDescription.setText(percent + "% of file downloaded");
+                // TODO - downloadProgressbar.setProgress(percentDownloaded);
+                System.out.println("Downloaded " + percent + "% of file downloaded");
             }
             bout.close();
             in.close();
@@ -53,6 +56,14 @@ public class Download implements Runnable {
             ex.printStackTrace();
         }
     }
+
+    // public static Label getDownloadDescription() {
+    //     return downloadProgressDescription;
+    // }
+
+    // public ProgressBar getDownloadProgressbar() {
+    //     return this.downloadProgressbar;
+    // }
 
     
 

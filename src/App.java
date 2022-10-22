@@ -17,8 +17,7 @@ public class App extends Application {
         Scene scene = new Scene(root);
   
         primaryStage.setTitle("PDF Downloader");
-        // primaryStage.getIcons().add(new Image("file:logo.png"));
-        primaryStage.getIcons().add(new Image(this.getClass().getResourceAsStream("logo.png")));
+        primaryStage.getIcons().add(new Image(this.getClass().getResourceAsStream("resources/logo.png")));
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
