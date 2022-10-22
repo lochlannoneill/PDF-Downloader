@@ -10,6 +10,7 @@
 * JavaFX Design: ***[Scene Builder](https://gluonhq.com/products/scene-builder/))***  
 
 ### About:
-An interactive GUI to download a PDF using a user-provided URL
+An interactive GUI to download a PDF using a user-provided URL.
+The download location is targeted to the user's desktop.
 
 ![ouput](https://github.com/lochlannoneill/PDF-Downloader-GUI/blob/main/src/resources/output.PNG?raw=true)
