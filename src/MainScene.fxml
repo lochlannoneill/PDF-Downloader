@@ -10,16 +10,18 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="400.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
    <children>
-      <MenuBar prefHeight="25.0" prefWidth="440.0" style="-fx-background-color: #202020; -fx-border-color: #1b1b1b;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <MenuBar prefHeight="25.0" prefWidth="440.0" style="-fx-background-color: #202020; -fx-border-color: #1b1b1b;" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -43,24 +45,25 @@
             <Image url="@resources/logo.png" />
          </image>
          <effect>
-            <Reflection fraction="0.4" topOpacity="0.05" />
+            <Reflection fraction="0.3" topOpacity="0.05" />
          </effect>
       </ImageView>
       <VBox alignment="CENTER" layoutY="221.0" prefHeight="200.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="221.0">
          <children>
+            <HBox alignment="CENTER" prefWidth="440.0">
+               <children>
+                  <TextField fx:id="textfieldSearchbar" prefHeight="40.0" prefWidth="320.0" promptText="URL" style="-fx-font-size: 18; -fx-background-color: #121212; -fx-border-color: #222222; -fx-text-fill: #fffcf9;" />
+               </children>
+            </HBox>
             <HBox alignment="CENTER" prefHeight="40.0" prefWidth="440.0" spacing="2.0">
                <children>
-                  <TextField fx:id="textfieldPath" disable="true" editable="false" prefHeight="32.0" prefWidth="220.0" promptText="Download Path" style="-fx-background-color: #313131; -fx-border-color: #222222; -fx-text-fill: #7b7b7b;" />
-                  <ComboBox id="selectedFileType" fx:id="comboboxFiletype" disable="true" prefHeight="30.0" prefWidth="98.0" promptText=".pdf" style="-fx-background-color: #313131; -fx-text-fill: #fffcf9;" visibleRowCount="5">
+                  <TextField fx:id="textfieldPath" editable="false" prefHeight="32.0" prefWidth="176.0" promptText="Download Path" style="-fx-background-color: #313131; -fx-border-color: #222222; -fx-text-fill: #7b7b7b;" />
+                  <TextField fx:id="textfieldFileName" prefHeight="32.0" prefWidth="80.0" promptText="filename" style="-fx-background-color: #313131; -fx-border-color: #222222; -fx-text-fill: #7b7b7b;" text="download" />
+                  <ComboBox id="selectedFileType" fx:id="comboboxFiletype" disable="true" editable="true" prefHeight="30.0" prefWidth="60.0" promptText=".pdf" style="-fx-text-fill: #fffcf9; -fx-background: transparent; -fx-text-fill: #7b7b7b; -fx-background-color: #313131;" visibleRowCount="5">
                      <cursor>
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </ComboBox>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefWidth="440.0">
-               <children>
-                  <TextField fx:id="textfieldSearchbar" prefHeight="40.0" prefWidth="320.0" promptText="URL" style="-fx-font-size: 18; -fx-background-color: #121212; -fx-border-color: #222222; -fx-text-fill: #fffcf9;" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefWidth="440.0">
@@ -72,6 +75,13 @@
                      <HBox.margin>
                         <Insets bottom="8.0" left="8.0" right="8.0" top="24.0" />
                      </HBox.margin>
+                     <effect>
+                        <DropShadow height="62.0" radius="30.5" width="62.0">
+                           <color>
+                              <Color red="0.07058823853731155" green="0.07058823853731155" blue="0.07058823853731155" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </Button>
                </children>
             </HBox>
@@ -79,7 +89,7 @@
       </VBox>
       <VBox alignment="CENTER" layoutY="455.0" prefHeight="51.0" prefWidth="400.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label fx:id="downloadProgressDescription" alignment="CENTER" contentDisplay="CENTER" opacity="0.4" prefHeight="17.0" prefWidth="240.0" textAlignment="CENTER" textFill="#ffffff80" />
+            <Label fx:id="downloadProgressDescription" alignment="CENTER" contentDisplay="CENTER" opacity="0.4" prefHeight="17.0" prefWidth="320.0" textAlignment="CENTER" textFill="#ffffff80" />
             <ProgressBar fx:id="downloadProgressbar" prefHeight="16.0" prefWidth="239.0" progress="0.01" style="-fx-control-inner-background: #313131; -fx-text-box-border: #222222; -fx-accent: #ff3c00; -fx-shadow-highlight-color: transparent;" />
          </children>
       </VBox>

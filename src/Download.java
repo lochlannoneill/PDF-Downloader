@@ -11,11 +11,12 @@ import javafx.scene.control.ProgressBar;
 
 public class Download implements Runnable {
     
-    String link;
-    File out;
-    String fileType;
-    ProgressBar downloadProgressbar;
-    Label downloadProgressDescription;
+    private String link;
+    private File out;
+    private String fileType;
+    private static String percent;
+    private ProgressBar downloadProgressbar;
+    private Label downloadProgressDescription;
 
     public Download (String link, File out, ProgressBar downloadProgressbar, Label downloadProgressDescription) {
         this.link = link;
@@ -42,9 +43,9 @@ public class Download implements Runnable {
                 downloaded += read;
 
                 percentDownloaded = (downloaded*100)/fileSize;
-                String percent = String.format("%.2f", percentDownloaded);
+                String percent = String.format("%.4f", percentDownloaded);
                 // TODO - downloadProgressDescription.setText(percent + "% of file downloaded");
-                // TODO - downloadProgressbar.setProgress(percentDownloaded);
+                downloadProgressbar.setProgress(percentDownloaded);
                 System.out.println("Downloaded " + percent + "% of file downloaded");
             }
             bout.close();
@@ -57,8 +58,12 @@ public class Download implements Runnable {
         }
     }
 
+    public static String getDownloadPercentage() {
+        return percent;
+    }
+
     // public static Label getDownloadDescription() {
-    //     return downloadProgressDescription;
+    //     return this.downloadProgressDescription;
     // }
 
     // public ProgressBar getDownloadProgressbar() {
