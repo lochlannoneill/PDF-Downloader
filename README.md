@@ -1,18 +1,15 @@
-## Getting Started
+<!--https://github.com/darsaveli/Readme-Markdown-Syntax-->
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# PDF Downloader
+### Collaborators:
+* **[Lochlann O Neill](https://github.com/lochlannoneill)**
 
-## Folder Structure
+### Background:
+* IDE: ***[VSCode](https://code.visualstudio.com/)***  
+* Language: ***[JavaFX](https://openjfx.io/)***  
+* JavaFX Design: ***[Scene Builder](https://gluonhq.com/products/scene-builder/))***  
 
-The workspace contains two folders by default, where:
+### About:
+An interactive GUI to download a PDF using a user-provided URL
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+![ouput](https://github.com/lochlannoneill/PDF-Downloader-GUI/blob/main/src/resources/output.PNG?raw=true)
