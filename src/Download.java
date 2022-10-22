@@ -58,18 +58,4 @@ public class Download implements Runnable {
         }
     }
 
-    public static String getDownloadPercentage() {
-        return percent;
-    }
-
-    // public static Label getDownloadDescription() {
-    //     return this.downloadProgressDescription;
-    // }
-
-    // public ProgressBar getDownloadProgressbar() {
-    //     return this.downloadProgressbar;
-    // }
-
-    
-
 }

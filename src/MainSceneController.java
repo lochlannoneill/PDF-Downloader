@@ -41,7 +41,6 @@ public class MainSceneController {
         comboboxFiletype.setValue(".pdf");
         comboboxFiletype.setItems(fileTypes);
         textfieldSearchbar.requestFocus();
-        // fileType = comboboxFiletype.getValue().toString();
         downloadProgressDescription.setText("Waiting for URL . . .");
     }
 
